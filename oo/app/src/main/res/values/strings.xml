@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">MegaTronics | تعلم الأردوينو</string>
+    <string name="code">
+        // include the library code:<b></b>
+
+#include LiquidCrystal.h
+/n
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+void setup() {
+  // set up the LCD\'s number of columns and rows:
+  lcd.begin(16, 2);
+  // Print a message to the LCD.
+  lcd.print("MegaTronics");
+}
+
+void loop() {
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting begins with 0):
+  lcd.setCursor(0, 1);
+  // print the number of seconds since reset:
+  lcd.print(millis() / 1000);
+}
+ </string>
+    <array name="proj1">elementmark</array>
+    <string name="proj1_2">1. Arduino Uno:
+    هو لوح أردوينو يعتمد على الميكروكنترولر من النوع ATmega328P و(الداتا شيت). ويحتوي على 14 مداخل ومخارج Digital (منها 6 يمكن استخدامها كمخارج PWM)، ويضاً على  6 مداخل Analog، ومفتاحين Reset ,ICSP وتحتوي على باقي المكونات التي تضمن عمله بشكل جيد. ويحتاج فقط لتشغيل توصيله بالكمبيوتر بكابل USB او من خلال محول ومنظم الجهد AC-to-DC او بطارية لكي يبدأ العمل. لوحة Arduino Uno هي الأولى في سلسلة لوحات اردوينو USB. ويوجد منه نوعان (PTH) والنوع الآخر (SMD) وهم نفس الوظائف.
+
+    2. Arduino Leonardo:
+    هو لوح مشابه للـ UNO ويعمل بالمتحكم ATmega32u4 (داتاشيت). يحتوي على 20 من مداخل ومخارج Digital (و7 منهم يمكن استخدامهم كمخارج لـ PWM و12 كمداخل Analog). ويحتوي على كريستال 16MHz، سوكيت USB Micro ومقبس للتغذية بالطاقة وايضاً مفتاحين الـ Reset و ICSP. ويحتوى على كل ما يحتاجه المايكروكنترولر للعمل ويتم توصيله بالكمبيوتر بمخارج USB لامداده بالطاقة وايضاً يتم تغذيته بواسطة محول او منظم جهد 5 فولت او بطارية لتشغيله.
+    ويمتاز لوح Leonardo بإنه يعمل بالمتحكم ATmega32u4 ويمتاز هذا المتحكم بإنه يحتوى على مخاطب عبر USB داخله، لذلك لا داعي لاستخدام معالج ثانوي كباقي لوحات الأردوينو الآخرى. مما يسمح باستخدامه مع الكومبيوتر كفارة أو لوح مفاتيح وسرعة المتحكم 16MHz والذاكرة 32KBit.
+
+    3. Arduino 101:
+    لوح Arduino 101 هو نوع متطور من UNO مع مداخل ومخارج اقل منه. لوح تعليمي متطور موفر للطاقة والمتحكم الذي يعمل به هو Intel® Curie™ Module مصنع من شركة انتيل، مع نفس بساطة عمل لوح الاردوينو. غير انها تمتاز بخاصية البلوتوث التي تتيح للوح للاتصال بالعالم الخارجي من حوله. ويضمن لك تصميم المشاريع التي تعتمد على البلوتوث. Bluetooth LE, 6-axis accelerometer/gyro.  يحتوي على 14 مخرج ومدخل Digital منهم (4 مخارج يمكن استخدامهم كمخارج PWM و6مداخل Analog).
+
+    4. Arduino Esplora:
+    لوح الاردوينو Esplora هو لوح يعمل على المايكروكنترولر ATmega32u4 مع 16 MHz crystal مستمد فكرتها من لوح الاردوينو Leonardo، كما ذكرنا في لوح Leonardo بانه يتم تعريفه على الكومبيوتر كماوس او كاي بورد مما يعتيه تواصل مباشر مع الكومبيوتر بدون الحاجة لمعالج ثانوي. فلوح Esplora هو ايضاً مثله ولكن مع مفاتيح ومخارج تحكم اكثر منه واضافة الى ذلك حساسات متعددة الوظائف مثل حساس الضوء ,حساس درجة الحرارة ,مقياس التسارع accelerometer ,مدخلان ومخرجان للTinkerKit,منبه buzzer . ويحتوى لوح Esplora على عصا تحكم , منزلق, مداخل للصوت والضوء مداخل للحساسات الخارجية. مع امكانية اضافة له شاشة ملونة LCD من النوع  TFT LCD Screen.
+
+    5. Arduino Due:
+    تختلف هذه اللوحة عن غيرها من لوحات الأردوينو بإنها تعمل على 3.3v ولاتقبل 5V وتعتبره High Voltage مما يؤدي الى عدم استطاعتها الارتباط مع بعض انواع الشيلد Shields ويعمل لوح Arduino Due بمتحكم من نوع AT91SAM3X8E (الداتاشيت) ويعمل المتحكم على 32-bit. يحتوى لوح Due على 54 مداخل/خرج Digital (و12منهم يمكن استخدامهم كمخارج PWM)، بالاضافة إلى 12 مدخل Analog و2 مخرج analog.ويمتاز بأنه يحتوى على منفذين للـ micro USB: واحدة لإتصالها بالكومبيوتر وامدادها بالطاقة والاخرى تعمل كـ OTG اي انه يمكن توصيل الوح مع الاجهزة التي تعمل بـ USB. وتبلغ سرعة المتحكم 84MHz.
+
+    6. Arduino Mega2560:
+    تم تصنيع هذه اللوحة للمشاريع الكبيرة والمعقدة والتي تحتاج إلى مكونات الكترونية كثيرة تتصل بها. لوح 2560 Arduino Mega يعمل بالمايكروكنترولر من النوع ATmega2560. ويحتوى لوح الاردوينو Mega2560 على 54 مدخل/مخرج Digital و ( 15 يمكن استخدامهم كـمخارج لـ PWM) و16 مدخل analog، ويحتوى على 4 UARTs (hardware serial ports)، ويعمل بكريستالة 16MHz.
+    ويحتوى ايضاً على المفاتيح الاساسية مثل reset , ICSP header، والمنافذ الاساسية ايضاً مثل مدخل لل يو اس بي USB ومدخل البور. مع امكانية امداده بالطاقة من كل من المنفذين او من خلال بطارية.
+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank /n fragment</string>
+
+</resources>

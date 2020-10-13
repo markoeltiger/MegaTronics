@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/mkwnat"
+    android:title="المكونات"
+    android:icon="@drawable/mkwnat"/>
+<item
+        android:id="@+id/msharea"
+        android:title="المشاريع"
+        android:icon="@drawable/msharea"/>
+<item
+        android:id="@+id/contactus"
+        android:title="تواصل معنا"
+        android:icon="@drawable/contact"/>
+</menu>
